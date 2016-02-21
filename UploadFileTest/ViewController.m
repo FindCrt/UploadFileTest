@@ -38,9 +38,9 @@
     }
     
     NSString* url = @"https://upload.api.weibo.com/2/statuses/upload.json";
-    NSString* content = @"哈哈哈";
+    NSString* content = _textField.text;
     
-    NSString* filepath = [[NSBundle mainBundle]pathForResource:@"卡车" ofType:@"png"];
+    NSString* filepath = [[NSBundle mainBundle]pathForResource:@"1" ofType:@"jpg"];
     
     NSDictionary* param = @{@"access_token":_access_token,@"status":content,@"source":@"2582981980"};
     

@@ -61,8 +61,8 @@
     NSString *filePair = [NSString stringWithFormat:@"--%@\r\nContent-Disposition: form-data; name=\"%@\"; filename=\"%@\";Content-Type=%@\r\n\r\n",boundary,fileKey,filename,contentType];
     [postData appendData:[filePair dataUsingEncoding:NSUTF8StringEncoding]];
     
-    [postData appendData:[@"测试文件数据" dataUsingEncoding:NSUTF8StringEncoding]];
-    //[postData appendData:fileData]; //加入文件的数据
+    //[postData appendData:[@"测试文件数据" dataUsingEncoding:NSUTF8StringEncoding]];
+    [postData appendData:fileData]; //加入文件的数据
     
     [postData appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
         request.HTTPBody = postData;

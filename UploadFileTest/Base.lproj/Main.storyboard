@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="L4U-Bo-gyg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="L4U-Bo-gyg">
                                 <rect key="frame" x="20" y="149" width="560" height="282"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="282" id="2Ai-Ow-rJ6"/>
@@ -123,10 +123,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h28-cN-sxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="641" y="-79"/>
+            <point key="canvasLocation" x="1066" y="-54"/>
         </scene>
     </scenes>
     <resources>
-        <image name="1.jpg" width="146" height="220"/>
+        <image name="1.JPG" width="146" height="220"/>
     </resources>
 </document>

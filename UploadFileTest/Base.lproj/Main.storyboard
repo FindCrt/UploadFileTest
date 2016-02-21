@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5oF-Kw-yor">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="flT-N4-9Ef">
+            <objects>
+                <navigationController id="5oF-Kw-yor" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h0O-wD-PE2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kFp-Y9-Sqc" kind="relationship" relationship="rootViewController" id="qpN-Fd-E9p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAd-O6-UTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-331" y="226"/>
+        </scene>
+        <!--测试文件上传-->
+        <scene sceneID="v3s-S7-EHA">
+            <objects>
+                <viewController id="kFp-Y9-Sqc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Niz-Hu-RJq"/>
+                        <viewControllerLayoutGuide type="bottom" id="EeS-Dl-AyW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sYp-Ff-BIG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="L4U-Bo-gyg">
+                                <rect key="frame" x="20" y="149" width="560" height="282"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="282" id="2Ai-Ow-rJ6"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入微博内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6SJ-QU-sby">
+                                <rect key="frame" x="20" y="100" width="463" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEg-u0-Kie">
+                                <rect key="frame" x="491" y="100" width="89" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="sue-PU-dBx"/>
+                                </constraints>
+                                <state key="normal" title="开始上传">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postWeibo:" destination="kFp-Y9-Sqc" eventType="touchUpInside" id="W8p-am-xNH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="6SJ-QU-sby" secondAttribute="leading" id="3HU-JX-JBG"/>
+                            <constraint firstItem="qEg-u0-Kie" firstAttribute="centerY" secondItem="6SJ-QU-sby" secondAttribute="centerY" id="413-Be-c7J"/>
+                            <constraint firstItem="qEg-u0-Kie" firstAttribute="leading" secondItem="6SJ-QU-sby" secondAttribute="trailing" constant="8" id="8bM-xv-wai"/>
+                            <constraint firstItem="L4U-Bo-gyg" firstAttribute="top" secondItem="6SJ-QU-sby" secondAttribute="bottom" constant="19" id="GW8-e8-SZ2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="L4U-Bo-gyg" secondAttribute="leading" id="HPO-AV-vMR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qEg-u0-Kie" secondAttribute="trailing" id="Ta0-kA-ySe"/>
+                            <constraint firstItem="6SJ-QU-sby" firstAttribute="top" secondItem="Niz-Hu-RJq" secondAttribute="bottom" constant="36" id="Wwa-o3-E0k"/>
+                            <constraint firstItem="L4U-Bo-gyg" firstAttribute="leading" secondItem="6SJ-QU-sby" secondAttribute="leading" id="q9d-Gz-FQS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L4U-Bo-gyg" secondAttribute="trailing" id="yvA-p9-gaz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="测试文件上传" id="w32-5o-5Tw">
+                        <barButtonItem key="rightBarButtonItem" title="授权应用" id="k9G-hV-Hwp">
+                            <connections>
+                                <action selector="AuthWeibo:" destination="kFp-Y9-Sqc" id="62E-up-hN4"/>
+                                <segue destination="jV3-fQ-TVk" kind="show" id="Fdy-pY-633"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="6SJ-QU-sby" id="sI0-KM-6b1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axX-4b-jId" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="393" y="63"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="nNu-EX-63R">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="jV3-fQ-TVk" customClass="WeiboAuthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OWJ-i6-3VQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xb1-yh-X3K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FI2-Ci-e6T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kv3-xu-cJy">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jV3-fQ-TVk" id="9pJ-lr-Nfd"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xb1-yh-X3K" firstAttribute="top" secondItem="Kv3-xu-cJy" secondAttribute="bottom" id="62d-uy-DAo"/>
+                            <constraint firstItem="Kv3-xu-cJy" firstAttribute="leading" secondItem="FI2-Ci-e6T" secondAttribute="leadingMargin" constant="-20" id="bSs-1u-8Tx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kv3-xu-cJy" secondAttribute="trailing" constant="-20" id="guU-uA-FtD"/>
+                            <constraint firstItem="Kv3-xu-cJy" firstAttribute="top" secondItem="OWJ-i6-3VQ" secondAttribute="bottom" id="uUU-JA-7zh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="rQX-Ni-XGT"/>
+                    <connections>
+                        <outlet property="webView" destination="Kv3-xu-cJy" id="gzI-Rx-11R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h28-cN-sxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641" y="-79"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1.jpg" width="146" height="220"/>
+    </resources>
+</document>
